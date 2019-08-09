@@ -2,6 +2,11 @@ import java.util.Arrays;
 
 public class Knapsack {
 
+	
+	private static final int[] littleweights = { 60, 100, 120 };
+	private static final int[] littlevalues = { 10, 20, 30 };
+	private static final int littlemaxWeight = 40;
+	
 	private static final int[] weights = { 23, 31, 29, 44, 53, 38, 63, 85, 89, 82 };
 	private static final int[] values = { 92, 57, 49, 68, 60, 43, 67, 84, 87, 72 };
 	private static final int maxWeight = 165;
@@ -19,17 +24,15 @@ public class Knapsack {
 	
 	public static void main(String[] args) {
 		int solution = 0;
-		System.out.println("Loading weights: " + Arrays.toString(weightsBig));
-		System.out.println("Loading values: " + Arrays.toString(valuesBig));
-
+		
 		KnapsackSolver ksna = new KnapsackDynamicBackSolver();
-		solution = ksna.solve(valuesBig, weightsBig, maxWeightBig);
+		solution = ksna.solve(littleweights, littlevalues, littlemaxWeight);
 		System.out.println(solution);
 		
-
-		KnapsackSolver ksnb = new KnapsackNaiveBackSolver();
-		solution = ksnb.solve(valuesBig, weightsBig, maxWeightBig);
-		System.out.println(solution);
+//
+//		KnapsackSolver ksnb = new KnapsackNaiveBackSolver();
+//		solution = ksnb.solve(valuesBig, weightsBig, maxWeightBig);
+//		System.out.println(solution);
 
 
 	}
