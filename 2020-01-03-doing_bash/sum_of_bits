@@ -1,0 +1,14 @@
+#!/bin/bash
+n=$1
+#code me
+$res = 0;
+
+$tester = 1;
+while [$tester < $n]; do
+  $res = $res + $n & $tester;
+  $tester = $tester << 1;
+done
+echo $res;
+
+
+https://www.codewars.com/kata/526571aae218b8ee490006f4/train/shell
